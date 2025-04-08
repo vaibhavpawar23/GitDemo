@@ -1,2 +1,2 @@
-testng1.xml
+testng2.xml
 Just a copy
