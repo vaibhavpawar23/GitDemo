@@ -1,0 +1,4 @@
+testng5.xml
+Just a copy
+
+adding the details in testng5
