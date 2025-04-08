@@ -1,0 +1,70 @@
+--------------------Create a repository in GitHub----------------------
+#Login to GitHub
+#Create a repository e.g. GitDemo
+
+--------------------Setup Local repository-----------------------------
+#Place the code at some location in local repository e.g. "Folder1"
+Folder1/GitDemo>git config -- global user.name "Vaibhav"
+Folder1/GitDemo>git config --global user.email "vaibhavpawar23@gmail.com"
+Folder1/GitDemo>git init #initialize git
+
+Folder1/GitDemo>git remote origin "GitHub Repository URL" # ------ setting up the remote origin
+
+Folder1/GitDemo>git add *  ##staging the code
+Folder1/GitDemo>git status
+Folder1/GitDemo>git commit -m "Commit Message here"
+Folder1/GitDemo>git status
+Folder1/GitDemo>git push origin master ## will push the code to Master branch
+
+#Login to gitHub and verify that the code is pushed to the Master branch
+
+--------------------------------Clone----------------------------------------------
+Folder2>git clone "git repository url" --> clones complete code to local
+-------------------------------------------------------------------
+Change some files in the cloned repository i.e. under Folder2
+
+Folder2/GitDemo> git config -- global user.name "Vaibhav"
+Folder2/GitDemo> git config -- global user.email "vaibhav.pawar23@gmail.com"
+Folder2/GitDemo> git init
+Folder2/GitDemo> git add *
+Folder2/GitDemo> git status
+Folder2/GitDemo> git commit -m "Pushing the updates"
+Folder2/GitDemo> git remote add origin master "GitHub URL"
+Folder2/GitDemo> git push origin master 
+#Login to GitHub to verify that the updates made in folder2 are pushed to GitHub
+
+------------------------------------------Pull------------------------------------
+Folder1/GitDemo>git pull origin master
+#Navigate to the folder1 and verify that the changes made in Folder2 are pulled in Folder1
+
+-----------------------------------------Creating a branch -----------------------------
+
+Folder1/GitDemo>git checkout -b develop #this will create a new branch and will switch to it
+Folder1/GitDemo>git status # To check the branch
+#Make some changes to the files
+Folder1/GitDemo>git add *
+Folder1/GitDemo>git status
+Folder1/GitDemo>git commit -m "Changed some files"
+Folder1/GitDemo>git push origin develop
+
+#Verify that the changed files are available in GitHub under Develop branch
+
+Folder2/GitDemo>git pull origin #This will pull the newly added branch develop
+#Make some changes to the files
+Folder2/GitDemo>git checkout develop #this will switch the branch to develop
+Folder2/GitDemo>git add *
+Folder2/GitDemo>git status
+Folder2/GitDemo>git commit -m "Updated the files"
+Folder2/GitDemo>git push origin develop
+
+#Verify that the changed files are available in GitHub under Develop branch
+
+Folder1/GitDemo>git checkout develop
+Folder1/GitDemo>git pull origin develop
+#verify that the changes done by user2 are available in local repository of User1 
+
+-----------------------------------------------Merge-------------------------------------
+Folder1/GitDemo>git checkout master # Switch to Master
+Folder1/GitDemo>git merge develop # develop is the branch to be merged
+Folder1/GitDemo>git status
+Folder1/GitDemo>git push # Push the merged changes to Master.
