@@ -1,3 +1,5 @@
+====================================Steps to understand the End to End flow of the GitHub=====================================
+
 --------------------Create a repository in GitHub----------------------
 #Login to GitHub
 #Create a repository e.g. GitDemo
@@ -59,6 +61,12 @@ Folder2/GitDemo>git push origin develop
 
 #Verify that the changed files are available in GitHub under Develop branch
 
+------------------------------------To know all branches and the active one -------------------------
+>git branch
+# it lists all the branches in the reporsitory and shows active branch in Green
+
+-----------------------------------------------------------------------------------------------------
+
 Folder1/GitDemo>git checkout develop
 Folder1/GitDemo>git pull origin develop
 #verify that the changes done by user2 are available in local repository of User1 
@@ -92,3 +100,11 @@ pqrs
 8
 
 #here c and d are extra in the working branch and master doesn't have it 
+
+
+-----------------------------------------------Extra commands----------------------------------
+>git reset Head --
+# to unstage the staged files
+
+>git restore <filepath/filename>
+#to restore the file deleted from local
