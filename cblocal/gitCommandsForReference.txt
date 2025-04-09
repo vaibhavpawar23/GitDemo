@@ -8,7 +8,7 @@ Folder1/GitDemo>git config -- global user.name "Vaibhav"
 Folder1/GitDemo>git config --global user.email "vaibhavpawar23@gmail.com"
 Folder1/GitDemo>git init #initialize git
 
-Folder1/GitDemo>git remote origin "GitHub Repository URL" # ------ setting up the remote origin
+Folder1/GitDemo>git remote add origin "GitHub Repository URL" # ------ setting up the remote origin
 
 Folder1/GitDemo>git add *  ##staging the code
 Folder1/GitDemo>git status
@@ -68,3 +68,27 @@ Folder1/GitDemo>git checkout master # Switch to Master
 Folder1/GitDemo>git merge develop # develop is the branch to be merged
 Folder1/GitDemo>git status
 Folder1/GitDemo>git push # Push the merged changes to Master.
+
+
+------------------------------------------------Merge conflict ---------------------------------
+Example file content:
+a
+b
+<<<<<<< HEAD
+c
+d
+=======
+>>>>>>> master
+
+
+pqrs
+1
+2
+3
+4
+5
+6
+7\
+8
+
+#here c and d are extra in the working branch and master doesn't have it 
